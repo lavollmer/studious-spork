@@ -4,8 +4,12 @@ import random
 import numpy as np
 import os
 import io
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+
+CORS(app)
 
 def generate_noise_overlay(size, noise_intensity=10):
     overlay = Image.new('RGBA', size, (0, 0, 0, 0))
