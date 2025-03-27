@@ -2,20 +2,15 @@
 // import viteLogo from '/vite.svg'
 import './App.css'
 import { useEffect, useState } from 'react';
+import Image from "../assets/medicinebottle.png";
 
 function App() {
-  const [message, setMessage] = useState('');
-
-  useEffect(() => {
-    fetch('http://127.0.0.1:5000/')
-      .then((response) => response.text())
-      .then((data) => setMessage(data));
-  }, []);
 
   return (
-    <div className="App">
-      <h1>{message}</h1>
-    </div>
+    <>
+    <h1>Hello</h1>
+    <img src={Image} alt="Medicine Bottle" />
+    </>
   );
 }
 
